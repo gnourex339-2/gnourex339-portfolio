@@ -5,7 +5,7 @@
 # ─────────────────────────────────────────────
 
 USERNAME=${1:-"TON_USERNAME"}
-REPO="gnourex-portfolio"
+REPO="gnourex339-portfolio"
 
 echo "🔧 Updating homepage in package.json..."
 node -e "

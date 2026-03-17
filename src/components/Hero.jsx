@@ -5,20 +5,20 @@ import { bio } from '../data/portfolio';
 
 const TERMINAL_LINES_EN = [
   '$ whoami',
-  '> amine — cognitive sciences & CS',
+  '> benzerga amine — full-stack / miage',
   '$ ls projects/',
-  '> compiler/  database/  ux-redesign/  cles-dossier/',
+  '> parking-api/  snakerot/  coupedumondetickets/  agoraedate/',
   '$ cat interests.txt',
-  '> bitcoin • compilers • UX • cognitive systems',
+  '> typescript • python • react • bun • hono',
   '$ _',
 ];
 const TERMINAL_LINES_FR = [
   '$ whoami',
-  '> amine — sciences cognitives & informatique',
+  '> benzerga amine — full-stack / miage',
   '$ ls projets/',
-  '> compilateur/  bdd/  ux-refonte/  dossier-cles/',
+  '> parking-api/  snakerot/  coupedumonde/  agoraedate/',
   '$ cat interets.txt',
-  '> bitcoin • compilateurs • UX • systèmes cognitifs',
+  '> typescript • python • react • bun • hono',
   '$ _',
 ];
 
@@ -200,7 +200,7 @@ export default function Hero() {
               color: 'var(--text-muted)', marginTop: '0.25rem',
               letterSpacing: '-0.02em',
             }}>
-              {lang === 'en' ? bio.title : bio.titleFR}
+              {lang === 'en' ? lang === 'en' ? bio.title : bio.titleFR : lang === 'en' ? bio.title : bio.titleFRFR}
             </h2>
           </motion.div>
 

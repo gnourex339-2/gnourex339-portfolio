@@ -9,24 +9,10 @@ export default function Contact() {
   const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
 
   const links = [
-    {
-      label: 'Email',
-      value: bio.email,
-      href: `mailto:${bio.email}`,
-      icon: '✉',
-    },
-    {
-      label: 'GitHub',
-      value: 'github.com/amine',
-      href: bio.github,
-      icon: '⎇',
-    },
-    {
-      label: 'LinkedIn',
-      value: 'linkedin.com/in/amine',
-      href: bio.linkedin,
-      icon: '◈',
-    },
+    { label: 'Email', value: bio.email, href: `mailto:${bio.email}`, icon: '✉' },
+    { label: 'Téléphone', value: bio.phone, href: `tel:${bio.phone}`, icon: '☎' },
+    { label: 'GitHub', value: bio.githubHandle, href: bio.github, icon: '⎇' },
+    { label: 'Location', value: bio.location, href: '#', icon: '◎' },
   ];
 
   return (
@@ -41,7 +27,7 @@ export default function Contact() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <SectionLabel label={lang === 'en' ? '04 — Contact' : '04 — Contact'} />
+          <SectionLabel label="04 — Contact" />
 
           <div style={{
             display: 'grid', gridTemplateColumns: '1fr 1fr',
@@ -61,8 +47,8 @@ export default function Contact() {
               </h2>
               <p style={{ color: 'var(--text-muted)', lineHeight: 1.8, fontSize: '0.88rem', maxWidth: '360px' }}>
                 {lang === 'en'
-                  ? `Open to internship opportunities, collaborative projects, and interesting conversations about technology, cognitive systems, or crypto.`
-                  : `Disponible pour des stages, projets collaboratifs, ou conversations intéressantes sur la technologie, les systèmes cognitifs ou la crypto.`
+                  ? `Open to internship opportunities, collaborative projects, and interesting conversations about tech, cybersecurity, or crypto.`
+                  : `Disponible pour des stages, projets collaboratifs, ou conversations sur la tech, la cybersécurité ou la crypto.`
                 }
               </p>
             </div>
@@ -94,7 +80,7 @@ export default function Contact() {
                     e.currentTarget.style.transform = 'none';
                   }}
                 >
-                  <span style={{ fontSize: '1.2rem', width: '24px', textAlign: 'center' }}>{link.icon}</span>
+                  <span style={{ fontSize: '1.1rem', width: '24px', textAlign: 'center' }}>{link.icon}</span>
                   <div>
                     <div style={{ fontSize: '0.68rem', color: 'var(--text-muted)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '2px' }}>{link.label}</div>
                     <div style={{ fontSize: '0.88rem', color: 'var(--accent)' }}>{link.value}</div>
